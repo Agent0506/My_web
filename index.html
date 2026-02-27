@@ -66,24 +66,24 @@
             <h2>Kontakt</h2>
         </section>
         <section class="item9 contact-container">
-            <div class="contact-item">
-                <img src="img/email.png" alt="email icon" class="contact-icon">
+            <div class="form">
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="bot-field">
+                    <p>
+                        <label>Your Name: <input type="text" name="name" required/></label>
+                    </p>
+                    <p>
+                        <label>Email <input type="email" name="email" required/></label>
+                    </p>
+                    <p>
+                        <label>Message: <textarea name="message" required></textarea></label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </form>
             </div>
-            <div class="contact-item">
-                <img src="img/github.png" alt="github icon" class="contact-icon">
-            </div>
-            <div class="contact-item">
-                <img src="img/discord.png" alt="discord icon" class="contact-icon">
-            </div>
-            <div class="contact-item">
-                <a href="mailto:mnovy222012@gmail.com">mnovy222012@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <a href="https://github.com/Agent0506">Github</a>
-            </div>
-            <div class="contact-item">
-                <a href="https://discord.com/users/agent0506000_92310">Discord</a>
-            </div>
+            <div class="links"></div>
         </section>
         <section class="item10">
             <footer>&copy; 2026 Míša Nový. All rights reserved.</footer>
