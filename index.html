@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Michal Nový</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <ul>
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
                 <li class="item"><a href="#" class="active">Domů</a></li>
                 <li class="item"><a href="#About">O mě</a></li>
                 <li class="item"><a href="#Projects">Moje projekty</a></li>
@@ -26,11 +28,11 @@
         <section class="item2" id="About">
             <h2>O mě</h2>
             <p id="about-text">Jmenuji se Michal Nový a jsem herní a webový vývojář. Programováním se zabývám od roku
-                2020 a během toho jsem vytvořil několik menších her. Programuji v herním enginu Unity a IDE Visual
-                Studio Code.</p>
+                2020 a během toho jsem vytvořil několik menších her a webů. Programuji v herním enginu Unity a IDE
+                Visual Studio Code.</p>
         </section>
         <section class="item3 center">
-            <img class="me" src="/img/me.jpg">
+            <img class="me" src="/img/me.jpg" fetchpriority="high">
         </section>
         <section class="item4" id="Projects">
             <h2>Moje projekty</h2>
@@ -67,20 +69,12 @@
         </section>
         <section class="item9 contact-container">
             <div class="form">
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="index.html">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="bot-field">
-                    <p>
-                        <label>Your Name: <input type="text" name="name" required /></label>
-                    </p>
-                    <p>
-                        <label>Email <input type="email" name="email" required /></label>
-                    </p>
-                    <p>
-                        <label>Message: <textarea name="message" required></textarea></label>
-                    </p>
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
+                    <label>Your Name: <input type="text" name="name" required /></label>
+                    <label>Email: <input type="email" name="email" required/></label>
+                    <label>Message: <textarea name="message" required></textarea></label>
+                    <button type="submit">Send message</button>
                 </form>
             </div>
             <div class="links"></div>
@@ -91,27 +85,6 @@
     </main>
     <script src="index.js"></script>
     <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyAhgr3cKNTWJetHTPWjRW1SP0lb4CUfQYo",
-            authDomain: "portfolio-894f4.firebaseapp.com",
-            projectId: "portfolio-894f4",
-            storageBucket: "portfolio-894f4.firebasestorage.app",
-            messagingSenderId: "515085039987",
-            appId: "1:515085039987:web:6b911c566d17da1c22ad06",
-            measurementId: "G-SQPPHTPG5M"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
     </script>
 </body>
 
